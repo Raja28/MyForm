@@ -5,7 +5,7 @@ require("dotenv").config()
 PORT = process.env.PORT || 2026
 const cors = require("cors")
 app.use(cors({
-    origin: "https://my-form-server.vercel.app/",
+    origin: "https://my-form-client.vercel.app",
     credentials: true
 }))
 
