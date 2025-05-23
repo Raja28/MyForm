@@ -192,17 +192,29 @@ export default function EducationalInfo_Form() {
                                     </div>
                                 )
                                     : (
-                                        <div className="col-12  my-2 ">
-                                            <button
-                                                disabled={status === _statusLoading}
-                                                onClick={() => setUpdate(prev => true)}
-                                                className="btn btn-success float-end rounded-4 my-2"
-                                                type="submit"
-                                                style={{ width: "5rem" }}
-                                            >
-                                                Update
-                                            </button>
-                                        </div>
+                                        <>
+                                            <div className="col-12  d-flex gap-3 w-100  justify-content-end">
+                                                <button
+                                                    disabled={status === _statusLoading}
+                                                    onClick={() => setUpdate(prev => true)}
+                                                    className="btn btn-success float-end rounded-4 my-2"
+                                                    type="submit"
+                                                    style={{ width: "5rem" }}
+                                                >
+                                                    Update
+                                                </button>
+                                                <Link
+
+                                                    to={"/form/project_information"}
+                                                    className="btn btn-success float-end rounded-4 my-2"
+                                                    type="submit"
+                                                    style={{ width: "5rem" }}
+                                                >
+                                                    Next
+                                                </Link>
+                                            </div>
+
+                                        </>
                                     )
                             }
                         </div>
